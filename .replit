@@ -1,2 +1,0 @@
-run = "clang++-7 -Weverything -Wno-deprecated -o main main.cpp  ; ./main < samples.txt"
-language = "C++" # optional

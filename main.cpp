@@ -23,9 +23,23 @@ int main() {
     }
    
   }
+  // invert the list
+  stringlink* prev = nullptr;
+  stringlink* current = head;
+  stringlink* next = nullptr;
+  while (current != nullptr){
+    // Before changing next of current, store next object
+    next = current->next;
+    // Now change next of current 
+    // This is where actual reversing happens 
+    current->next = prev;
+    // Move prev and curr one step forward 
+    prev = current; 
+    current = next;
+  }
+  head = prev;
 
   // Print out all the words in the linked list...
-  
   stringlink* w = head;
   while (w != nullptr) {
     // the *w below means dereference the stringlink pointer to
@@ -46,7 +60,6 @@ int main() {
     w = t;
   }
 
-  cout << "Finished" << endl;
 }
 
 bool is_in_list(stringlink *head, string word ){
