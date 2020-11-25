@@ -3,7 +3,7 @@
 
 class word : public std::string {
   public:
-  word *next; // use this to link to the next  object in the linked list
-  int counter = 1;
+  word *next; //pointer to next object in list
+  int counter = 1; 
   
 };
